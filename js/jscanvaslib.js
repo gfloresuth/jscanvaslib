@@ -37,6 +37,10 @@ function AsyncImage(aPath,nPars,callback)
 	return odata;
 }
 
+function isset(aVar)
+{
+	return (typeof aVar == "undefined")?false:true;
+}
 
 // "The most important object of all" (ok, is the main object JSCanvasLib)
 function JSCanvasLib(){
@@ -58,7 +62,13 @@ function JSCanvasLib(){
 			//data.pars.x is the x position
 			//data.pars.y is the y position
 			//data.pars.ctx is the current context (2d context of canvas)
-			data.pars.ctx.drawImage(data.img,data.pars.x,data.pars.y);
+			if(isset(data.pars.w) && isset(data.pars.h))
+			{
+				data.pars.ctx.drawImage(data.img,data.pars.x,data.pars.y,data.pars.w,data.pars.h);
+			}else{
+				data.pars.ctx.drawImage(data.img,data.pars.x,data.pars.y);
+			}
+			
 		},
 		
 		// This function do the initial async creation of the image calling
@@ -66,6 +76,13 @@ function JSCanvasLib(){
 			
 			this._images[url]=new AsyncImage(url,{x:ix,y:iy,ctx:this.ctx},this._asyncDrawImage);
 		},
+
+		// This function do the initial async creation of the image calling (with Stretch)
+		drawImageStretch:function(url,ix,iy,iw,ih){
+			
+			this._images[url]=new AsyncImage(url,{x:ix,y:iy,w:iw,h:ih,ctx:this.ctx},this._asyncDrawImage);
+		},
+
 		
 		// Set the reference to the canvas object from DOM
 		setCanvas:function(id){

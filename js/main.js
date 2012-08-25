@@ -34,6 +34,9 @@ function main()
 	
 	// Loads and draws a simple image
 	canv.drawImage("images/test1.png",20,20);
+
+	// Loads and draws a simple image
+	canv.drawImageStretch("images/test1.png",120,120,200,40);
 	
 }
 
