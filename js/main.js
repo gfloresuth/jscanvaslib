@@ -1,14 +1,17 @@
 /*
-Created by: Gustavo Adolfo Flores González
-
-Project: JSCanvasLib
-File: js/main.js
-Description: Is an easy to use JavaScript Library for the Canvas element (html5).
-
-
+* Created by: Gustavo Adolfo Flores González
+* Project: JSCanvasLib
+* File: js/main.js
+* Description: Is an easy to use JavaScript Library for the Canvas element (html5).
+* Last modified: August 29, 2012
+*
 */
 
 
+/*
+* Function: main  It Starts this little test
+*
+*/
 function main()
 {
 	// creates the object
