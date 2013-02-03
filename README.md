@@ -6,7 +6,7 @@ By: Gustavo Adolfo Flores González
 **This code don't use JQuery or any other external library**
 This project is started in a simple way, and in a OpenSource way, so every file is created in here (for the moment, is intended to keep it this way for a long time).
 
-**Futre changes**
+**Future changes**
 The future changes will include event handling for mouse, keyboard and ajax.
 
 **Expect more coding in the future**
