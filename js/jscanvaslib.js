@@ -42,7 +42,7 @@ function AsyncImage(aPath,nPars,callback)
 }
 
 /*
-* Function isset Checks if a variabl is set to a value
+* Function isset Checks if a variable is set to a value
 * @param aVar A viariable to check
 *
 */
